@@ -1,3 +1,4 @@
+
 /*
 *   @author
 *   Pranjal Tripathi
@@ -5,6 +6,8 @@
 /**
  * NumberOfNode
  */
+
+package BinaryTree;
 
 public class NumberOfNode {
     static BinaryTreeNode root;

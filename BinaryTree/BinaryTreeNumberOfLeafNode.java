@@ -1,3 +1,4 @@
+package BinaryTree;
 public class BinaryTreeNumberOfLeafNode {
     static BinaryTreeNode root;
 

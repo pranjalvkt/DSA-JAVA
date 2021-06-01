@@ -2,29 +2,24 @@
 *   @author
 *   Pranjal Tripathi
 */
-/**
- * LevelOrderTraversal
- */
 
 package BinaryTree;
 
-import java.util.*;
+import java.util.LinkedList;
+import java.util.Queue;
 
-
-public class LevelOrderTraversal {
+public class MinimumDepthOfBinaryTree {
     static BinaryTreeNode root;
 
-    LevelOrderTraversal() {
+    MinimumDepthOfBinaryTree() {
         root = null;
     }
+
     public static void main(String[] args) {
         root = new BinaryTreeNode(1);
         root.left = new BinaryTreeNode(2);
         root.right = new BinaryTreeNode(3);
         root.left.left = new BinaryTreeNode(4);
-        root.left.right = new BinaryTreeNode(5);
-        root.right.left = new BinaryTreeNode(6);
-        root.right.right = new BinaryTreeNode(7);
 
         /*
         Binary Tree: 
@@ -33,27 +28,31 @@ public class LevelOrderTraversal {
 
                 2               3
 
-            4       5       6       7
+            4             
 
             
         */
 
-        System.out.println(traverse(root));
+        System.out.println(minDepth(root));
+
     }
 
-    static List<List<Integer>> traverse(BinaryTreeNode root) {
-        List<List<Integer>> bfs = new ArrayList<>();
+    static int minDepth(BinaryTreeNode root) {
+        int minimumDepth = 0;
         if (root == null) {
-            return bfs;
+            return 0;
         }
         Queue<BinaryTreeNode> queue = new LinkedList<>();
         queue.offer(root);
         while (!queue.isEmpty()) {
+            minimumDepth++;
             int levelSize = queue.size();
-            List<Integer> currentLevel = new ArrayList<>();
             for (int i = 0; i < levelSize; i++) {
                 BinaryTreeNode current = queue.poll();
-                currentLevel.add(current.data);
+                if (current.left == null && current.right == null) {
+                    return minimumDepth;
+                }
+
                 if (current.left != null) {
                     queue.offer(current.left);
                 }
@@ -61,9 +60,7 @@ public class LevelOrderTraversal {
                     queue.offer(current.right);
                 }
             }
-            bfs.add(currentLevel);
         }
-        return bfs;
+        return minimumDepth;
     }
-
 }

@@ -5,9 +5,9 @@
 
 package GeneralProblems;
 
-public class RainWaterTapping {
+public class RainWaterTrapping {
     public static void main(String[] args) {
-        int[] arr = {3, 1, 2, 4, 0, 1, 3, 2};
+        int[] arr = {0,1,0,2,1,0,1,3,2,1,2,1};
         System.out.println(calculateRainWater(arr));
     }  
     static int calculateRainWater(int[] arr) {

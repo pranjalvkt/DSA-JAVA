@@ -6,7 +6,7 @@ package BinaryTree;
 public class BinaryTreeTraversal {
 
     static BinaryTreeNode root;
-    BinaryTreeTraversal() {
+    public BinaryTreeTraversal() {
         root = null;
     }
     public static void main(String[] args) {
@@ -39,7 +39,7 @@ public class BinaryTreeTraversal {
     }
 
     //Pre-Order
-    static void preOrder(BinaryTreeNode root) {
+    public static void preOrder(BinaryTreeNode root) {
         if(root == null) {
             return;
         }
@@ -49,7 +49,7 @@ public class BinaryTreeTraversal {
     }
 
     // In-Order
-    static void inOrder(BinaryTreeNode root) {
+    public static void inOrder(BinaryTreeNode root) {
         if (root == null) {
             return;
         }
@@ -58,7 +58,7 @@ public class BinaryTreeTraversal {
         inOrder(root.right);
     }
 
-    static void postOrder(BinaryTreeNode root) {
+    public static void postOrder(BinaryTreeNode root) {
         if (root == null) {
             return;
         }

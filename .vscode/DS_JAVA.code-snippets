@@ -30,7 +30,7 @@
 		"body": [
 		  "import java.io.*;",
 		  "",
-		  "class ${1:ClassName}",
+		  "public class ${1:ClassName}",
 		  "{",
 		  "    static class Reader",
 		  "    { ",

@@ -1,8 +1,8 @@
-package Resources;
+package CodeForces;
 
 import java.io.*;
 
-class A
+public class A4
 {
     static class Reader
     { 
@@ -147,7 +147,15 @@ class A
         */
 
         /* WRITE YOUR CODE HERE */
-
+        int w = inputInt();
+        if (w <= 2) {
+            print("No");
+        }
+        else if ((w & 1) == 0) {
+            print("YES");
+        } else {
+            print("NO");
+        }
 
         bw.flush();
         bw.close();

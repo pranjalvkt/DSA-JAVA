@@ -7,7 +7,7 @@ package BinaryTree;
 
 public class PathSum {
     public static void main(String[] args) {
-        //TODO 1
+        //
     }
     public boolean hasPathSum(BinaryTreeNode root, int targetSum) {
         if(root == null) return false;

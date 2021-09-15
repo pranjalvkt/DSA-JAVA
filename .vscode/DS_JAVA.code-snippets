@@ -25,6 +25,30 @@
 		]
 		
 	},
+	"Java Template for CodeChef": {
+		"prefix": "codechef",
+		"body": [
+		  "package CodeChef; // REMOVE PACKAGE ",
+		  "import java.util.*;",
+		  "",
+		  "public class ${1:ClassName} { // CHANGE CLASS DECLARATION TO--> \"class CodeChef\"",
+		  "    public static void main(String[] args) {",
+		  "        try {",
+		  "            Scanner sc = new Scanner(System.in);",
+		  "            /* WRITE YOUR CODE HERE */",
+		  "            $2",
+		  "            ",
+		  "            sc.close();",
+		  "        } catch(Exception e) {",
+		  "            return;",
+		  "        }",
+		  "        ",
+		  "    }",
+		  "}",
+		  ""
+		],
+		"description": "Java Template for CodeChef"
+	},
 	"Java Template for Competitive Coding": {
 		"prefix": "temp",
 		"body": [
@@ -184,4 +208,5 @@
 		],
 		"description": "Java Template for Competitive Coding"
 	  }
+
 }

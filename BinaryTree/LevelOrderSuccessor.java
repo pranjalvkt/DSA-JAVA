@@ -40,6 +40,9 @@ public class LevelOrderSuccessor {
 
     }
 
+    /* YE BTAYEGA KI, GIVEN "KEY" KE SAME LEVEL PE KAUNSA NODE HAI
+    e.g., 4 KA LEVEL ORDER SUCCESSOR 5 HOGA KYUKI DONO SAME LEVEL PE HAIN
+    */
     static BinaryTreeNode levelOrderSuccessor(BinaryTreeNode root, int key) {
         if (root == null) {
             return null;

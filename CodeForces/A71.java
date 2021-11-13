@@ -1,4 +1,3 @@
-package CodeForces;
 import java.util.*;
 import java.io.*;
 

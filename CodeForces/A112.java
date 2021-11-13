@@ -1,4 +1,3 @@
-package CodeForces;
 
 // public class A112 {
 //     public static void main(String[] args) {

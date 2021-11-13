@@ -1,4 +1,3 @@
-package CodeForces; // REMOVE PACKAGE 
 import java.util.*;
 import java.io.*;
 

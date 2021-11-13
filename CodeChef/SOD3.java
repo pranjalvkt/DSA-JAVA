@@ -1,8 +1,8 @@
-package CodeForces;
+package CodeChef; // REMOVE PACKAGE 
 import java.util.*;
 import java.io.*;
 
-public class A71 {// CHANGE CLASS DECLARATION TO--> "class CodeChef"
+public class SOD3 {// CHANGE CLASS DECLARATION TO--> "class CodeChef"
     public static void main(String[] args) {
         try {
             FastReader fs = new FastReader();
@@ -10,24 +10,33 @@ public class A71 {// CHANGE CLASS DECLARATION TO--> "class CodeChef"
             int t = fs.nextInt();
             while(t-- > 0){
                 /* HERE IS THE SOLUTION ! */
-                String str = fs.nextLine();
-                StringBuffer s = new StringBuffer(str);
-                int size = str.length();
-                int toInsert = size - 1;
-                
-                String newStr = Integer.toString(toInsert - 1);
-
-                if (size > 10) {
-                    s.replace(1, toInsert, newStr);
-                    System.out.println(s);
-                } else {
-                    System.out.println(s);
+                long l = fs.nextInt();
+                long r = fs.nextInt();
+                long count = 0;
+                for (long i = l; i <= r; i++) {
+                    long divByThree = 0;
+                    divByThree = getSum(i);
+                    if (divByThree % 3 == 0) {
+                        count++;
+                    } 
+                    out.println(count);
                 }
+                
             }
             out.close();
         } catch (Exception e) {
             return;
         }
+    }
+    static long getSum(long num) {
+        long temp = 0;
+        long sum = 0;
+        while (num > 0) {
+            temp = num % 10;
+            sum += temp;
+            num = num / 10;
+        }
+        return sum;
     }
     static class FastReader {
         BufferedReader br;

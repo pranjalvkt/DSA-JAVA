@@ -1,8 +1,8 @@
-package CodeForces;
+package CodeChef; // REMOVE PACKAGE 
 import java.util.*;
 import java.io.*;
 
-public class A71 {// CHANGE CLASS DECLARATION TO--> "class CodeChef"
+public class TESTSERIES {// CHANGE CLASS DECLARATION TO--> "class CodeChef"
     public static void main(String[] args) {
         try {
             FastReader fs = new FastReader();
@@ -10,18 +10,27 @@ public class A71 {// CHANGE CLASS DECLARATION TO--> "class CodeChef"
             int t = fs.nextInt();
             while(t-- > 0){
                 /* HERE IS THE SOLUTION ! */
-                String str = fs.nextLine();
-                StringBuffer s = new StringBuffer(str);
-                int size = str.length();
-                int toInsert = size - 1;
-                
-                String newStr = Integer.toString(toInsert - 1);
+                int[] arr = new int[5];
 
-                if (size > 10) {
-                    s.replace(1, toInsert, newStr);
-                    System.out.println(s);
+                int indWon = 0;
+                int engWon = 0;
+
+                for (int i = 0; i < arr.length; i++) {
+                    arr[i] = fs.nextInt();
+                }
+                for (int i = 0; i < arr.length; i++) {
+                    if (arr[i] == 1) {
+                        indWon++;
+                    } else if(arr[i] == 2) {
+                        engWon++;
+                    }
+                }
+                if (indWon == engWon) {
+                    out.println("DRAW");
+                } else if (indWon > engWon) {
+                    out.println("INDIA");
                 } else {
-                    System.out.println(s);
+                    out.println("ENGLAND");
                 }
             }
             out.close();

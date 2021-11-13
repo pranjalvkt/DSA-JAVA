@@ -1,28 +1,46 @@
-package CodeForces;
 import java.util.*;
 import java.io.*;
 
-public class A71 {// CHANGE CLASS DECLARATION TO--> "class CodeChef"
+public class A469 {// CHANGE CLASS DECLARATION TO--> "class CodeChef"
     public static void main(String[] args) {
         try {
             FastReader fs = new FastReader();
             FastWriter out = new FastWriter();
             int t = fs.nextInt();
-            while(t-- > 0){
-                /* HERE IS THE SOLUTION ! */
-                String str = fs.nextLine();
-                StringBuffer s = new StringBuffer(str);
-                int size = str.length();
-                int toInsert = size - 1;
-                
-                String newStr = Integer.toString(toInsert - 1);
 
-                if (size > 10) {
-                    s.replace(1, toInsert, newStr);
-                    System.out.println(s);
-                } else {
-                    System.out.println(s);
-                }
+            int p = fs.nextInt();
+            int[] pArr = new int[p];
+            for (int i = 0; i < p; i++) {
+                pArr[i] = fs.nextInt();
+            } 
+
+            int q = fs.nextInt();
+            int[] qArr = new int[q];
+            for (int i = 0; i < q; i++) {
+                qArr[i] = fs.nextInt();
+            }
+
+            boolean[] levelArr = new boolean[t];
+            Arrays.fill(levelArr, false);
+
+            for (int i = 0; i < p; i++) {
+                levelArr[pArr[i]-1] = true;
+            }
+            
+            for (int i = 0; i < q; i++) {
+                levelArr[qArr[i]-1] = true;
+            }
+            boolean flag = true;
+            for (int i = 0; i < levelArr.length; i++) {
+                if (levelArr[i] == false) {
+                    flag = false;
+                    break;
+                } 
+            }
+            if (flag) {
+                out.println("I become the guy.");
+            } else {
+                out.println("Oh, my keyboard!");
             }
             out.close();
         } catch (Exception e) {

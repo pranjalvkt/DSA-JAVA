@@ -1,8 +1,8 @@
-package CodeForces;
+package CodeChef; // REMOVE PACKAGE
 import java.util.*;
 import java.io.*;
 
-public class A71 {// CHANGE CLASS DECLARATION TO--> "class CodeChef"
+public class MIXTURE {// CHANGE CLASS DECLARATION TO--> "class CodeChef"
     public static void main(String[] args) {
         try {
             FastReader fs = new FastReader();
@@ -10,18 +10,15 @@ public class A71 {// CHANGE CLASS DECLARATION TO--> "class CodeChef"
             int t = fs.nextInt();
             while(t-- > 0){
                 /* HERE IS THE SOLUTION ! */
-                String str = fs.nextLine();
-                StringBuffer s = new StringBuffer(str);
-                int size = str.length();
-                int toInsert = size - 1;
-                
-                String newStr = Integer.toString(toInsert - 1);
+                int a = fs.nextInt();
+                int b = fs.nextInt();
 
-                if (size > 10) {
-                    s.replace(1, toInsert, newStr);
-                    System.out.println(s);
-                } else {
-                    System.out.println(s);
+                if(a > 0 && b > 0) {
+                    out.println("Solution");
+                } else if (a == 0) {
+                    out.println("Liquid");
+                } else if (b == 0) {
+                    out.println("Solid");
                 }
             }
             out.close();

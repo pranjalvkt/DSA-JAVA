@@ -1,25 +1,41 @@
+ // REMOVE PACKAGE 
 import java.util.*;
 import java.io.*;
 
-public class A231 {// CHANGE CLASS DECLARATION TO--> "class CodeChef"
+public class A158 {// CHANGE CLASS DECLARATION TO--> "class CodeChef"
     public static void main(String[] args) {
         try {
             FastReader fs = new FastReader();
             FastWriter out = new FastWriter();
             int t = fs.nextInt();
-            int questionSolved = 0;
-            while(t-- > 0){
-                /* HERE IS THE SOLUTION ! */
-                int a = fs.nextInt();
-                int b = fs.nextInt();
-                int c = fs.nextInt();
-                
-                if ((a == 1 && b == 1) || (b == 1 && c == 1) || (c == 1 && a == 1) ) {
-                    questionSolved++;
-                }
-
+            int n = fs.nextInt();
+            int count = 0;
+            int[] arr = new int[t];
+            for (int i = 0; i < t; i++) {
+                arr[i] = fs.nextInt();
             }
-            System.out.println(questionSolved);
+            if (n >= t) {
+                System.out.println(t);
+            }
+            if (arr[n] > 0) {
+                for (int i = 0; i < t; i++) {
+                    if(arr[i] > 0 && arr[i] >= arr[n]) {
+                        count++;
+                    } else {
+                        break;
+                    }
+                }
+            }
+            else {
+                for (int i = 0; i <= n; i++) {
+                    if(arr[i] > 0) {
+                        count++;
+                    } else {
+                        break;
+                    }
+                }
+            }
+            System.out.println(count);
             out.close();
         } catch (Exception e) {
             return;

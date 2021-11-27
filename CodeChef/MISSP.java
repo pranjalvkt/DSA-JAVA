@@ -1,25 +1,30 @@
+package CodeChef; // REMOVE PACKAGE 
 import java.util.*;
 import java.io.*;
-
-public class A231 {// CHANGE CLASS DECLARATION TO--> "class CodeChef"
+public class MISSP {// CHANGE CLASS DECLARATION TO--> "class CodeChef"
     public static void main(String[] args) {
         try {
             FastReader fs = new FastReader();
             FastWriter out = new FastWriter();
             int t = fs.nextInt();
-            int questionSolved = 0;
             while(t-- > 0){
-                /* HERE IS THE SOLUTION ! */
-                int a = fs.nextInt();
-                int b = fs.nextInt();
-                int c = fs.nextInt();
-                
-                if ((a == 1 && b == 1) || (b == 1 && c == 1) || (c == 1 && a == 1) ) {
-                    questionSolved++;
-                }
+                int n = fs.nextInt();
+                int[] arr = new int[n];
 
+                for (int i = 0; i < n; i++) {
+                    arr[i] = fs.nextInt();
+                }
+                List<Integer> arrayList = new LinkedList<>();
+                for (int i = 0; i < n; i++) {
+                    if(arrayList.contains(arr[i])) {
+                        arrayList.remove(Integer.valueOf(arr[i]));
+                    } else if (!arrayList.contains(arr[i])) {
+                        arrayList.add(arr[i]);
+                    }
+                }
+                System.out.println(arrayList.get(0));
+                
             }
-            System.out.println(questionSolved);
             out.close();
         } catch (Exception e) {
             return;

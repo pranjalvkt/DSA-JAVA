@@ -1,25 +1,26 @@
+package CodeChef; // REMOVE PACKAGE 
 import java.util.*;
 import java.io.*;
 
-public class A231 {// CHANGE CLASS DECLARATION TO--> "class CodeChef"
+public class TWONMS {// CHANGE CLASS DECLARATION TO--> "class CodeChef"
     public static void main(String[] args) {
         try {
             FastReader fs = new FastReader();
             FastWriter out = new FastWriter();
             int t = fs.nextInt();
-            int questionSolved = 0;
             while(t-- > 0){
                 /* HERE IS THE SOLUTION ! */
                 int a = fs.nextInt();
                 int b = fs.nextInt();
-                int c = fs.nextInt();
+                int n = fs.nextInt();
                 
-                if ((a == 1 && b == 1) || (b == 1 && c == 1) || (c == 1 && a == 1) ) {
-                    questionSolved++;
+                if(n % 2 == 1) {
+                    a *= 2;
+                    System.out.println((int)Math.max(a,b)/(int)Math.min(a,b));
+                } else {
+                    System.out.println((int)Math.max(a,b)/(int)Math.min(a,b));
                 }
-
             }
-            System.out.println(questionSolved);
             out.close();
         } catch (Exception e) {
             return;

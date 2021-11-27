@@ -20,8 +20,7 @@ public class DeleteNodeInBST {
         root = deleteNode(root, 7);
         
         // PRINTING BST
-        // BinaryTreeTraversal btt = new BinaryTreeTraversal();
-        // btt.preOrder(root);
+        BinaryTreeTraversal.preOrder(root);
     }
 
     static BinaryTreeNode findMin(BinaryTreeNode root) {
@@ -40,13 +39,13 @@ public class DeleteNodeInBST {
             if (root.left == null && root.right == null) {
                 root = null;
             } else if (root.left == null) {
-                BinaryTreeNode temp = root;
+                // BinaryTreeNode temp = root;
                 root = root.right;
-                temp = null;
+                // temp = null;
             } else if (root.right == null) {
-                BinaryTreeNode temp = root;
+                // BinaryTreeNode temp = root;
                 root = root.left;
-                temp = null;
+                // temp = null;
             } else {
                 BinaryTreeNode temp = findMin(root.right);
                 root.data = temp.data;

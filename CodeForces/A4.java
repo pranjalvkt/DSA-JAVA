@@ -1,4 +1,4 @@
-
+package CodeForces;
 import java.io.*;
 
 public class A4

@@ -1,3 +1,4 @@
+package CodeForces;
 import java.util.*;
 
 public class A381 {// CHANGE CLASS DECLARATION TO--> "class CodeChef" 
@@ -12,10 +13,11 @@ public class A381 {// CHANGE CLASS DECLARATION TO--> "class CodeChef"
             for (int i = 0; i < t; i++) {
                 arr[i] = sc.nextInt();
             }
+            sc.close();
             int[] auxArr = new int[t];
 
             int i = 0;
-            int j = t-1;
+            // int j = t-1;
 
             for (int k = 0; k < auxArr.length; k++) {
                 

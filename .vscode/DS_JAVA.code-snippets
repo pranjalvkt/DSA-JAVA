@@ -28,12 +28,11 @@
 	"Normal IO": {
 		"prefix": "normalIO",
 		"body": [
-		  "package ${1:PackageName}; // REMOVE PACKAGE while using CodeChef;",
+		  "package ${1:PackageName}; // REMOVE PACKAGE declaration while submiting on CodeChef",
 		  "",
 		  "import java.util.*;",
 		  "",
-		  "public class ${2:ClassName} {// CHANGE CLASS DECLARATION TO--> \"class CodeChef\" ",
-		  "// Remove \"public\" keyword before class name",
+		  "public class ${2:ClassName} {// CHANGE CLASS DECLARATION TO--> \"class CodeChef\" or \"public class Main\" while submiting on CodeChef ",
 		  "",
 		  "    public static void main(String[] args) {",
 		  "        try {",
@@ -54,11 +53,11 @@
 	"Fast IO": {
 		"prefix": "fastIO",
 		"body": [
-		"package ${1:PackageName}; // REMOVE PACKAGE ",
+		"package ${1:PackageName}; // REMOVE PACKAGE declaration while submiting on CodeChef ",
 		  "import java.util.*;",
 		  "import java.io.*;",
 		  "",
-		  "public class ${2:ClassName} {// CHANGE CLASS DECLARATION TO--> \"class CodeChef\"",
+		  "public class ${2:ClassName} {// CHANGE CLASS DECLARATION TO--> \"class CodeChef\" or \"public class Main\" while submiting on CodeChef ",
 		  "    public static void main(String[] args) {",
 		  "        try {",
 		  "            FastReader fs = new FastReader();",
@@ -131,6 +130,7 @@
 		  "}"
 		],
 		"description": "Fast IO"
-	  }
+	  },
+	  
 
 }
